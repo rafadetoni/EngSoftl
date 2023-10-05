@@ -30,6 +30,49 @@ Bem vindo ao repositório do componente curricular Engenharia de Software I, do 
 ### 2.1.2 Requisitos para interfaces gráficas de usuário
 ## 2.2 Requisitos funcionais
 ### 2.2.1 Diagramas de casos de uso
+@startuml
+actor Paciente #0000FF
+actor Recepcionista #FF0000
+actor Enfermeira1 #FF0000
+actor Enfermeira2 #FF0000
+actor Médico #FF0000
+rectangle "Sistema de Pronto Atendimento" {
+usecase "Entregar documentos" as entregar #00FF00
+usecase "Conferir documentos" as conferir #00FF00
+usecase "Chamar para triagem e fazer anamnese" as triagem #00FF00
+usecase "Classificar risco clínico" as classificar #00FF00
+usecase "Chamar para consultório" as consultorio #00FF00
+usecase "Examinar paciente" as examinar #00FF00
+usecase "Dar alta com medicação" as medicacao #00FF00
+usecase "Dar alta com exames" as exames #00FF00
+usecase "Internar o paciente" as internar #00FF00
+}
+Paciente -right- entregar #0000FF
+Recepcionista -left- conferir #FF0000
+Enfermeira1 -left- triagem #FF0000
+Enfermeira1 -left- classificar #FF0000
+Enfermeira2 -left- consultorio #FF0000
+Médico -left- examinar #FF0000
+Médico -left- medicacao #FF0000
+Médico -left- exames #FF0000
+Médico -left- internar #FF0000
+entregar ..> conferir #000000
+conferir ..> triagem #000000
+triagem ..> classificar #000000
+classificar ..> consultorio #000000
+consultorio ..> examinar #000000
+examinar ..> medicacao #000000
+examinar ..> exames #000000
+examinar ..> internar #000000
+note right of classificar
+- Vermelho (atendimento emergencial)
+- Laranja (atendimento urgencial, até 10 minutos)
+- Amarelo (risco não imediato, até uma hora)
+- Verde (pouco urgente, até duas horas)
+- Azul (sem urgência, até quatro horas)
+end note
+@enduml
+
 ### 2.2.2 Fluxos dos casos de uso
 ## 2.3 Requisitos não-funcionais
 ### 2.3.1 Requisitos de desempenho
