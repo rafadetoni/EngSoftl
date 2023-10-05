@@ -1,12 +1,6 @@
 # EngSoftl
 Bem vindo ao repositório do componente curricular Engenharia de Software I, do curso de ciência da computação da Unochapecó.
 
-## Descrição
-Esse arquivo contém todos os materias e arquivos relacionados à disciplina de Engenharia de Software I.
-
-## Outros informes
-
-
 # UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ - UNOCHAPECÓ
 # ESCOLA POLITÉCNICA 
 
@@ -29,3 +23,5 @@ Esse arquivo contém todos os materias e arquivos relacionados à disciplina de 
 ### 1.9 Hipótese de trabalho
 
 ## 2 Requisitos específicos
+### 2.1 Interfaces externas
+### 2.2 Requisitos funcionais
